@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Formulario em JS</title>
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/flaticon.css" rel="stylesheet" />
+  <link href="assets/css/_flaticon.css" rel="stylesheet" />
+  <script src="assets/js/angular.min.js" type="text/javascript"></script>
+  <script src="assets/js/teste.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="principal" ng-controller="principalController">
+        <form id="formprinc" class="formprincipal">
+            <div class="linha tela {{ obj.tela1 }}" id="tela1" ng-class="add.class">
+                    <div class="timeline">
+                        <div class="linha avancos">
+                            <div class="coluna4"><p class="avanco left"><i class="flaticon-checked"></i></p></div>
+                            <div class="coluna4"><p class="avanco center"><i class="flaticon-checked"></i></p></div>
+                            <div class="coluna4"><p class="avanco right"><i class="flaticon-checked"></i></p></div>
+                        </div>
+                        <div class="linha passos">
+                            <div class="coluna4"><p class="passo left"><i class="flaticon-next"></i></p></div>
+                            <div class="coluna4"><p class="passo center"><i class="flaticon-next"></i></p></div>
+                            <div class="coluna4"><p class="passo right"><i class="flaticon-next"></i></p></div>
+                        </div>
+                        <div class="linha dots">
+                            <div class="coluna4"><p class="dot left"></p></div>
+                            <div class="coluna4"><p class="dot center"></p></div>
+                            <div class="coluna4"><p class="dot right"></p></div>
+                        </div>
+                        <div class="linhadotempo"></div>
+                    </div>
+                    <div class="formulario">
+                        <h3 class="linha titulo">Formulário padrão</h3>
+                        <div class="linha">
+                            <input ng-model="user.email" class="linha">
+                            <input ng-model="user.password" type="password" class="linha">
+                        </div>
+                    </div>
+                    <a href ng-click="addClass()" class="linha btn-avancar">Avançar</a>
+            </div>
+
+            <div class="linha tela" id="tela2" ng-class="myClass">
+                <div class="timeline">
+                    <div class="linha avancos">
+                        <div class="coluna4"><p class="avanco left"><i class="flaticon-checked"></i></p></div>
+                        <div class="coluna4"><p class="avanco center"><i class="flaticon-checked"></i></p></div>
+                        <div class="coluna4"><p class="avanco right"><i class="flaticon-checked"></i></p></div>
+                    </div>
+                    <div class="linha passos">
+                        <div class="coluna4"><p class="passo left"><i class="flaticon-next"></i></p></div>
+                        <div class="coluna4"><p class="passo center"><i class="flaticon-next"></i></p></div>
+                        <div class="coluna4"><p class="passo right"><i class="flaticon-next"></i></p></div>
+                    </div>
+                    <div class="linha dots">
+                        <div class="coluna4"><p class="dot left"></p></div>
+                        <div class="coluna4"><p class="dot center"></p></div>
+                        <div class="coluna4"><p class="dot right"></p></div>
+                    </div>
+                    <div class="linhadotempoverde"></div>
+                    <div class="linhadotempo"></div>
+                </div>
+                <div class="formulario">
+                    <h3 class="linha titulo">Formulário padrão</h3>
+                    <div class="linha">
+                        <div class="coluna6"><input ng-model="cep" class="linha" placeholder="Cep"></div>
+                        <div class="coluna6"><p class="cep-label">Não sabe o seu CEP <span>?</span></p></div>
+                    </div>
+                    <input class="linha" ng-model="endereco" placeholder="Endereço">
+                    <div class="linha">
+                        <input class="coluna2" ng-model="numeroresidencia" placeholder="Nº">
+                        <input class="coluna10" ng-model="complemento" placeholder="Complemento">
+                    </div>
+                    <input class="linha" ng-model="bairro" placeholder="Bairro">
+                    <div class="linha">
+                        <input class="coluna10" ng-model="cidade" placeholder="Cidade">
+                        <input class="coluna2 uf" ng-model="estadouf" placeholder="UF">
+                    </div>
+                <input type="checkbox" ng-model="enderecodiferente" value="Sim"><span class="checkbox-label"> Endereço de entrega é diferente?</span>
+                </div>
+                <div class="linha btns">
+                    <a href class="linha btn-voltar coluna2" ng-click="removeClass()"><i class="flaticon-back"></i></a>
+                    <a href class="linha btn-avancar coluna10" ng-click="addClass2()">Avançar</a>
+                </div>
+                
+            </div>
+            <div class="linha tela" id="tela3" ng-class="myClass2">
+                <div class="timeline">
+                    <div class="linha avancos">
+                        <div class="coluna4"><p class="avanco left"><i class="flaticon-checked"></i></p></div>
+                        <div class="coluna4"><p class="avanco center"><i class="flaticon-checked"></i></p></div>
+                        <div class="coluna4"><p class="avanco right"><i class="flaticon-checked"></i></p></div>
+                    </div>
+                    <div class="linha passos">
+                        <div class="coluna4"><p class="passo left"><i class="flaticon-next"></i></p></div>
+                        <div class="coluna4"><p class="passo center"><i class="flaticon-next"></i></p></div>
+                        <div class="coluna4"><p class="passo right"><i class="flaticon-next"></i></p></div>
+                    </div>
+                    <div class="linha dots">
+                        <div class="coluna4"><p class="dot left"></p></div>
+                        <div class="coluna4"><p class="dot center"></p></div>
+                        <div class="coluna4"><p class="dot right"></p></div>
+                    </div>
+                    <div class="linhadotempoverde coluna6"></div>
+                    <div class="linhadotempo"></div>
+                </div>
+                <div class="linha">
+                    <div class="checking">
+                        <div class="check-in"><i class="flaticon-checked"></i></div>
+                        <div class="texto-check"><p>Parábens, você chegou até aqui</p></div>
+                    </div>
+                </div>
+                <div class="formulario">
+                    <p ng-bind="user.email"></p>
+                    <p ng-bind="user.password"></p>
+                    <p ng-bind="user.key"></p>
+                    <p ng-bind="cep"></p>
+                    <p ng-bind="endereco"></p>
+                    <p ng-bind="numeroresidencia"></p>
+                    <p ng-bind="complemento"></p>
+                    <p ng-bind="bairro"></p>
+                    <p ng-bind="cidade"></p>
+                    <p ng-bind="estadouf"></p>
+                    <p ng-bind="enderecodiferente"></p>
+                </div>
+                <div class="linha ajuda">
+                    <p><strong>Atenção</strong></p>
+                    <p>Obrigado pela atenção</p>
+                    <p><strong>Alguma outra pergunta?</strong></p>
+                    <p>Faça perguntas a nossa CTO pelo email que ele entrou em contato com você</p>
+                </div>
+                <a href class="linha btn-avancar" ng-click="removeClass2()">Voltar</a>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        document.write('<script src="http://' + (location.host || 'localhost').split(':') [0] + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
+    </script>
+</body>
+</html>

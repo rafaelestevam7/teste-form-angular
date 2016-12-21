@@ -1,0 +1,8 @@
+{
+    "credential": {
+        "user": "exemplo@exemplo.com",
+        "password": "123quatro5678",
+        "error_message": "Email ou senha está errado"
+    },
+    "key": "d6f67bc92bbaf06ec44b828d0da4eda9"
+}

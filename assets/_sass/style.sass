@@ -1,0 +1,269 @@
+$cor-principal: #3f9288
+$cor-botao: #ee7203
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Arial', sans-serif
+
+
+body
+    background: #fcfcfc
+
+
+.principal
+    max-width: 640px
+    margin: 0 auto
+    background: #ffffff
+    box-shadow: 0px 0px 6px hsla(0, 0%, 40%, 0.17)
+
+
+.linha
+    width: 100%
+    display: inline-block
+
+.coluna2
+    float: left
+    width: 16.667%
+    
+.coluna4
+    float: left
+    width: 33.33%
+    
+.coluna6
+    float: left
+    width: 50%
+    
+.coluna10
+    float: left
+    width: 83.33%
+
+.timeline
+    padding: 20px 30px 35px
+    background-color: #eeeeee
+    border-top: 1px solid #ccc
+    border-bottom: 1px solid #ccc
+    margin: 30px 0px
+    display: inline-block
+    width: 100%
+
+.linhadotempo
+    height: 2px
+    width: 100%
+    background-color: #cccccc
+
+#tela2 .linhadotempoverde, #tela3 .linhadotempoverde
+    height: 2px
+    background-color: $cor-principal
+    position: relative
+    z-index: 2
+    width: 50%
+    margin-bottom: -2px
+
+#tela3 .linhadotempoverde
+    width: 100%
+    
+.avancos
+    position: relative
+    margin-bottom: -31px
+    z-index: 4
+    
+.avanco
+    padding: 5px
+    background-color: $cor-principal
+    border: solid 2px $cor-principal
+    width: 30px
+    border-radius: 1000px
+    color: #ffffff
+    
+.passos
+    position: relative
+    margin-bottom: -20px
+    z-index: 3
+
+.passo
+    padding: 5px
+    border: solid 2px $cor-principal
+    width: 30px
+    background-color: #ffffff
+    border-radius: 1000px
+    color: $cor-principal
+    
+.dots
+    position: relative
+    margin-bottom: -6px
+    z-index: 2
+    
+.dot
+    height: 10px
+    width: 10px
+    background-color: #cccccc
+    border-radius: 1000px
+
+.dot.left, .passo.left, .avanco.left
+    float: left
+    
+.dot.center, .passo.center, .avanco.center
+    margin: 0 auto
+
+.dot.right, .passo.right, .avanco.right
+    float: right
+    
+#tela1.active .avancos
+    display: none
+
+#tela1.active .passo.center, #tela1.active .passo.right, #tela2.active .passo.right
+    display: none
+    
+#tela2.active .avanco.center, #tela2.active .avanco.right
+    display: none
+    
+#tela3.active .avanco.right
+    display: none
+
+.titulo
+    color: $cor-principal
+    text-align: center
+    margin-bottom: 50px
+
+
+input
+    height: 35px
+    border: 1px solid #a09f9f
+    border-radius: 5px
+    margin-bottom: 10px
+    padding: 10px
+    color: #666666
+    
+input.coluna2
+    width: 14.667%
+    margin-right: 2%
+
+input.uf
+    width: 14.667%
+    margin-left: 2%
+    margin-right: 0
+
+.cep-label
+    font-size: 12px
+    text-align: center
+    line-height: 30px
+    color: #666666
+
+.cep-label span
+    background-color: #333333
+    color: #ffffff
+    padding: 3px
+    cursor: pointer
+    border-radius: 1000px
+    
+.cep-label span::before
+    content: 'Busque seu cep no site dos Correios'
+    background-color: #333333
+    position: absolute
+    color: #eeeeee
+    padding: 10px
+    border-radius: 10px
+    display: none
+    
+.cep-label span:hover::before
+    display: block
+    
+input[type="checkbox"]
+    float: left
+    
+.checkbox-label
+    font-size: 10px
+    float: left
+    margin-top: 12px
+    margin-left: 10px
+    
+.btn-avancar
+    height: 35px
+    background-color: $cor-botao
+    color: #ffffff
+    font-weight: bold
+    border: 0px
+    text-align: center
+    text-decoration: none
+    padding: 9px
+    text-transform: uppercase
+
+#tela1 .btn-avancar
+    margin-top: 239px
+
+
+.btn-voltar
+    height: 35px
+    background-color: #b2b2b2
+    color: #ffffff
+    font-weight: bold
+    border: 0px
+    font-size: 20px
+    text-align: center
+    text-decoration: none
+    padding-top: 5px
+
+.btns
+    margin-top: 89px
+
+.tela
+    height: auto
+    display: none
+    background: #ffffff
+
+.tela.active
+    display: block
+
+.tela.active#tela3, .tela.active#tela2
+    position: absolute
+    max-width: 640px
+    width: 100%
+    top: 0px
+    height: auto
+    z-index: 3
+    overflow: hidden
+
+.formulario
+    padding: 30px
+    
+#tela3 .formulario
+    min-height: 319px 
+    
+.checking
+    width: 200px
+    margin: 0 auto
+    
+    
+.check-in
+    border: 5px solid $cor-principal
+    border-radius: 1000px
+    padding: 20px
+    margin-right: 10px
+    width: 84px
+    font-size: 30px
+    color: $cor-principal
+    float: left
+
+.texto-check
+    color: $cor-principal
+    font-weight: bold
+    padding-top: 15px
+    
+#tela3 .formulario p
+    text-align: center
+    color: #69a9d1
+    font-size: 14px
+    font-weight: bold
+    margin-bottom: 7px
+
+.linha.ajuda
+    margin-bottom: 15px
+    
+.linha.ajuda p
+    text-align: center
+    font-size: 10px
+    
+.linha.ajuda p strong
+    color: $cor-principal
